@@ -1,6 +1,4 @@
     def sumOfPowers(self, a : int, b : int) -> int:
-        # code here
-        
         def sieve():
             for i in range(2, maxn,2) :
                 spf[i] = 2 
@@ -16,8 +14,6 @@
             while(num != 1):
                 hmap[spf[num]] += 1
                 num = num//spf[num]
-        # print(spf)
             for i in range(a, b+1):
                 prime_factorization(i)
-            # print(hmap)
             return sum(hmap.values())
